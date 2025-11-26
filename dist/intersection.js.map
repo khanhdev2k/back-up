@@ -1,0 +1,1 @@
+{"version":3,"file":"intersection.js","sourceRoot":"","sources":["../src/intersection.ts"],"names":[],"mappings":";;AAEA,MAAM,UAAU,GAAe;IAC3B,IAAI,EAAE,uBAAuB;CAChC,CAAA;AAGD,MAAM,QAAQ,GAAa;IACvB,aAAa,EAAE,qBAAqB;CACvC,CAAA;AAID,SAAS,QAAQ,CAAC,MAAc;IAC5B,mDAAmD;IACnD,IAAG,MAAM,IAAI,MAAM,EAAE,CAAC;QAClB,cAAc;QACd,OAAM;IACV,CAAC;IAED,uBAAuB;AAC3B,CAAC"}

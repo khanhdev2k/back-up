@@ -1,15 +1,22 @@
 type FileSource = { path: string}
 
-type DGSource = {
-    fileSource?: string,
-    fileName: string
+const fileSource: FileSource = {
+    path: 'some/path/to/file.csv'
 }
 
-type TotalSource = DGSource & FileSource
+type DBSource = { connectionURL: string}
+const dbSource: DBSource = {
+    connectionURL: 'some-connection-url'
+}
 
-// Extend with interface
+type Source = FileSource | DBSource
 
-interface PhotoFile { WeddingFile: string, LoveingFile: string}
-interface PhotoDevice { deviceName: string, DeviceVid: string}
+function loadData(source: Source) {
+    // opne + read file OR reach out to database server
+    if('path' in source) {
+        // source.path
+        return
+    }
 
-interface Album extends PhotoDevice, PhotoFile {}
+    // source.connectionUrl
+}

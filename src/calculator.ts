@@ -53,6 +53,7 @@ function calculatorInvesment(data: InvestmentData): CalculationResult {
             totalContributions
         });
     }
+    return annualResults
 
 }
 
@@ -71,6 +72,13 @@ function printResult(results: CalculationResult) {
     }
 } // => print the output here
 
-const results = calculatorInvesment(...)
+const InvestmentData = {
+    initialAmount: 35000,
+    anualContribution: 12,
+    duaration: 10,
+    expectdReturn: 23000
+}
+
+const results = calculatorInvesment(InvestmentData)
 
 printResult(results);

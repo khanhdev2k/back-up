@@ -6,7 +6,7 @@ function calculatorInvesment(data) {
         return "Initial amount must be at least zero";
     }
     if (duaration <= 0) {
-        return 'No invalid amount of years provided';
+        return "No invalid amount of years provided";
     }
     if (expectdReturn < 0) {
         return "Expected return must be at least zero";
@@ -16,12 +16,15 @@ function calculatorInvesment(data) {
     let totalInterestEarned = 0;
     const annualResults = [];
     for (let i = 0; i < duaration; i++) {
-        total = total * (1 + expectdReturn / 100); // expectdReturn is in percentage
+        // Growth from returns
+        total = total * (1 + expectdReturn / 100);
+        // Interest earned up to this year
         totalInterestEarned = total - initialAmount - totalContributions;
+        // Add annual contribution
         totalContributions += anualContribution;
         total += anualContribution;
         annualResults.push({
-            year: `Year ${i + 1}`,
+            year: i + 1,
             totalAmount: total,
             totalInterestEarned,
             totalContributions
@@ -41,5 +44,13 @@ function printResult(results) {
         console.log(` Total Interest Earned: $${yearEndResult.totalInterestEarned.toFixed(0)}`);
         console.log('---------------------------');
     }
-}
+} // => print the output here
+const InvestmentData = {
+    initialAmount: 35000,
+    anualContribution: 12,
+    duaration: 10,
+    expectdReturn: 23000
+};
+const results = calculatorInvesment(InvestmentData);
+printResult(results);
 //# sourceMappingURL=calculator.js.map
